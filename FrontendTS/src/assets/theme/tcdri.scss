@@ -1,0 +1,254 @@
+@use './color.scss';
+@use './header.scss';
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #cccccc;
+  margin: 0;
+  height: 100%;
+
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      PingFang SC,
+      Hiragino Sans GB,
+      Microsoft YaHei,
+      Helvetica Neue,
+      Helvetica,
+      Arial,
+      sans-serif,
+      Apple Color Emoji,
+      Segoe UI Emoji,
+      Segoe UI Symbol;
+  }
+
+  /* 布局中具体内容的Card*/
+  #layoutCard {
+    height: 100%;
+    min-height: 100%;
+    background-color: var(--tp-layoutCard);
+    border-radius: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 0px;
+    padding-bottom: 16px;
+  }
+
+  /*菜单*/
+  .sideMenu {
+    height: 100%;
+    .menu_container {
+      width: 100%;
+      height: 100%;
+      --n-item-height: 38px !important;
+      background-color: var(--tp-menuBackground); /*未选中部分的背景色*/
+      overflow-x: hidden;
+      overflow-y: auto;
+      overflow-y: overlay;
+      .n-menu-item-content {
+        line-height: 1;
+        &::before {
+          left: 0;
+          right: 0;
+          border-radius: 0;
+        }
+      }
+      .n-menu--vertical.n-menu--collapsed {
+        .n-menu-item-content {
+          padding-left: 25px !important;
+        }
+      }
+      .n-menu-item {
+        margin-top: 0;
+      }
+      .n-submenu-children {
+        background-color: var(--tp-menuSubBackground);
+      }
+      .n-menu-item-content__icon {
+        width: 16px !important;
+        height: 16px !important;
+        /*margin: 0 !important;*/
+        margin-right: 6px !important;
+      }
+    }
+  }
+
+  /*上下布局的顶部按钮*/
+  .topMenu {
+    .menu_container {
+      background-color: var(--tp-menuBackground); /*未选中部分的背景色*/
+      --n-item-height: 54px !important;
+      .n-menu-item {
+        .n-menu-item-content--selected {
+          background-color: var(--tp-menuSelectedBackground);
+        }
+        .n-menu-item-content--child-active {
+          background-color: var(--tp-menuSelectedBackground);
+        }
+      }
+    }
+  }
+
+  /*菜单整体向左折叠之后，单个菜单悬停菜单图标之后的样式*/
+  .n-menu-tooltip {
+    background-color: var(--tp-menuBackground) !important; /*未选中部分的背景色*/
+    --n-border-radius: 0px !important;
+    --n-text-color: var(--tp-menuToolTipTextColor) !important;
+    .n-popover-arrow {
+      background-color: var(--tp-menuBackground) !important; /*未选中部分的背景色*/
+    }
+  }
+
+  /*菜单整体向左折叠之后，单个有子菜单的菜单悬停菜单图标之后的样式*/
+  .n-dropdown-menu {
+    background-color: var(--tp-menuBackground) !important; /*未选中部分的背景色*/
+    --n-border-radius: 0px !important;
+    --n-option-color-hover: var(--tp-menuBackground) !important; /*未选中部分的背景色*/
+    --n-option-color-active: var(--tp-menuSelectedBackground) !important;
+    --n-option-text-color: var(--tp-menuTextColor) !important;
+    --n-option-text-color-hover: var(--tp-menuTextColorSelected) !important;
+    --n-option-text-color-active: var(--tp-menuTextColorSelected) !important;
+    --n-option-text-color-child-active: var(--tp-menuTextColorSelected) !important;
+    --n-padding: 0px !important;
+    --n-option-height: 38px !important;
+    .n-dropdown-option-body__prefix--show-icon {
+      color: var(--tp-menuTextColor) !important;
+    }
+    .n-dropdown-option-body__suffix--has-submenu {
+      --n-suffix-color: var(--tp-menuTextColor) !important;
+    }
+    .n-dropdown-option-body--active {
+      &::before {
+        left: 0px !important;
+        right: 0px !important;
+      }
+    }
+  }
+
+  /*树形，选中的节点*/
+  .n-tree-node--selected {
+    --n-node-text-color: var(--tp-treeTextSelected);
+    --n-arrow-color: var(--tp-treeTextSelected);
+  }
+
+  .n-tree-node-wrapper {
+    height: 36px;
+    padding: 0px !important;
+    .n-tree-node {
+      height: 100%;
+      padding: 0px !important;
+      align-items: center;
+    }
+  }
+
+  /*按钮最小宽度*/
+  .n-button {
+    min-width: 60px; /*响应规定*/
+  }
+
+  /*纯图标按钮不受60px限制*/
+  .iconButton {
+    min-width: unset !important;
+  }
+
+  .n-input-number {
+    .n-button {
+      min-width: unset !important;
+    }
+  }
+
+  /*时间轴控件中的时间*/
+  .n-timeline-item-content__meta {
+    color: var(--tp-timelineTime) !important;
+  }
+
+  /*时间轴中的info类型的Title文字颜色*/
+  .n-timeline-item--info-type {
+    .n-timeline-item-content__title {
+      color: var(--tp-timelineTitle-info) !important;
+    }
+  }
+
+  /* .n-base-select-menu {*/
+  /*     --n-option-height: '34px' !important;*/
+  /* }*/
+
+  /*下拉选项*/
+  .n-select-menu {
+    margin: 8px 0px 8px 0px !important;
+    --n-border-radius: 2px !important;
+    .n-base-select-option {
+      --n-option-padding: 0px 8px 0px 8px !important;
+      &::before {
+        left: 8px;
+        right: 8px;
+      }
+    }
+  }
+
+  .n-modal {
+    &.noTitleModal {
+      .n-card__content {
+        padding: 0px 30px 20px 30px !important; /*响应规定*/
+      }
+    }
+    .n-card-header {
+      height: 46px !important; /*响应规定*/
+    }
+    .n-card__content {
+      padding: 20px 30px 20px 30px !important; /*响应规定*/
+    }
+  }
+
+  .n-modal-mask {
+    background-color: rgba(29, 33, 41, 0.6) !important; /*遮罩层 响应规定*/
+  }
+
+  /*通知中的按钮*/
+  .n-notification-main-footer {
+    justify-content: end !important; /*响应规定*/
+  }
+
+  /*tooltip的文字*/
+  .n-popover__content {
+    --n-font-size: 12px !important; /*响应规定*/
+  }
+
+  .n-tabs {
+    height: 100%;
+    .n-tabs-pane-wrapper {
+      height: 100%;
+      .n-tab-pane {
+        height: 100%;
+      }
+    }
+  }
+}
+
+#app {
+  height: 100%;
+}
+
+.n-config-provider {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--tp-scrollbar);
+  border: 3px solid transparent;
+  border-radius: 7px;
+
+  &:hover {
+    background-color: var(--tp-scrollbarHover);
+  }
+}

@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<!--<ImplicitUsings>enable</ImplicitUsings>-->
+		<!--<Nullable>enable</Nullable>-->
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<Authors>wrx,cyl,yg</Authors>
+		<Company>TCDRI</Company>
+		<NeutralLanguage>zh-CN</NeutralLanguage>
+		<Copyright>TCDRI</Copyright>
+		<PackageReleaseNotes>1.0.0 由原框架升级而来</PackageReleaseNotes>
+		<Title>TCDRI Platform T2ACore</Title>
+		<Description>
+         【标题】TCDRI Platform T2ACore
+         【版本】1.0.0 由原框架升级而来
+         【说明】
+		</Description>
+	</PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="ACadSharp" Version="3.3.23" />
+      <PackageReference Include="AWSSDK.S3" Version="4.0.18.7" />
+      <PackageReference Include="CSRedisCore" Version="3.8.807" />
+      <PackageReference Include="Duende.IdentityModel" Version="7.1.0" />
+      <PackageReference Include="EPPlus" Version="4.5.3.3" />
+      <PackageReference Include="Exceptionless.AspNetCore" Version="6.1.0" />
+      <PackageReference Include="Exceptionless.Extensions.Logging" Version="6.1.0" />
+      <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+      <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
+      <PackageReference Include="Minio.AspNetCore" Version="6.0.1" />
+      <PackageReference Include="netDxf" Version="2023.11.10" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+      <PackageReference Include="NLog.Web.AspNetCore" Version="5.4.0" />
+      <PackageReference Include="RestSharp" Version="112.1.0" />
+      <PackageReference Include="SharpZipLib" Version="1.4.2" />
+      <PackageReference Include="SqlSugar.DuckDBCore" Version="5.1.4.205" />
+      <PackageReference Include="SqlSugarCore" Version="5.1.4.211" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+</Project>
+

@@ -1,0 +1,42 @@
+{
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.quickSuggestions": {
+    "strings": true // 启用字符串中的快速建议
+  },
+  "files.associations": {
+    "*.json": "jsonc" // 将所有 .json 文件关联为 jsonc 格式
+  },
+  "json.schemaDownload.enable": false, //忽略json的schema
+  "editor.tabSize": 2, // 设置制表符大小为 2 个空格
+  "editor.detectIndentation": false, // 禁用自动检测缩进
+  "emmet.triggerExpansionOnTab": true, // 启用 Emmet 的 Tab 键扩展
+  "editor.formatOnSave": true, // 启用保存时自动格式化
+  "javascript.format.enable": true, // 启用 JavaScript 格式化
+  "explorer.confirmDelete": false, // 禁用删除文件时的确认对话框
+  "javascript.updateImportsOnFileMove.enabled": "always", // 启用文件移动时自动更新 JavaScript 导入
+  "editor.suggest.snippetsPreventQuickSuggestions": false, // 允许代码片段建议与快速建议同时出现
+  "prettier.htmlWhitespaceSensitivity": "ignore", // 设置 Prettier 的 HTML 空白敏感度为忽略
+  "prettier.vueIndentScriptAndStyle": true, // 启用 Prettier 的 Vue 脚本和样式缩进
+  "files.autoSave": "onFocusChange", // 设置文件自动保存为焦点变化时
+  "files.eol": "\n" // 设置文件的行尾符为换行符
+}

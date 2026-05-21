@@ -1,0 +1,97 @@
+$nav-bar-height: 54px;
+$tab-bar-height: 38px;
+$header-padding: 0 20px;
+$header-shadow: var(--tp-headerShadow);
+$tab-bar-active-color: var(--tp-tabsActiveText);
+$tab-bar-background: var(--tp-tabBarBackground);
+$nav-bar-border: var(--tp-navBarBorder);
+$tab-bar-item-background: var(--tp-tabBarItemBackground);
+
+/* 左侧菜单logo */
+.menu-top-logo {
+    /* position: absolute;*/
+    height: $nav-bar-height;
+    width: 100%;
+    background-color: var(--tp-menuBackground);
+    border-bottom: var(--tp-topLogoBottomLine);
+}
+
+/* 布局中上部Header样式 即上部*/
+.headerBar {
+    position: absolute;
+    height: $nav-bar-height;
+    width: 100%;
+    padding: 8px;
+}
+
+.headerBarHorizental {
+    background-color: var(--tp-navBarBackground);
+}
+
+/*有头部的布局 Header样式 headerBar中的NSpace*/
+.navBar {
+    background-color: var(--tp-headerBackground);
+    position: relative;
+    height: $nav-bar-height;
+    border-bottom: $nav-bar-border;
+    padding: $header-padding;
+    box-shadow: $header-shadow;
+}
+
+/*有头部的布局 Header样式 headerBar中的NSpace*/
+.navBar-origin {
+    background-color: var(--tp-headerBackground-origin);
+    position: relative;
+    height: $nav-bar-height;
+    border-bottom: $nav-bar-border;
+    padding: $header-padding;
+    box-shadow: $header-shadow;
+}
+
+/*标签页*/
+.tabs-bar {
+    padding: $header-padding;
+    height: $tab-bar-height;
+    justify-content: center;
+    background-color: $tab-bar-background;
+    border: none;
+    .n-tabs-nav-scroll-content {
+        height: $tab-bar-height - 12;
+        .n-tabs-pad,
+        .n-tabs-tab-pad {
+            border-bottom: none !important;
+        }
+        .n-tabs-tab-pad {
+            width: 6px;
+        }
+        .n-tabs-tab {
+            height: $tab-bar-height - 12 !important;
+            border: 1px solid $tab-bar-item-background !important;
+            background: $tab-bar-item-background !important;
+            border-radius: 3px !important;
+            .n-tabs-tab__label {
+                font-size: 14px !important;
+                line-height: 1 !important;
+            }
+            .n-tabs-tab__close {
+                &::before,
+                .n-base-icon {
+                    width: 16px;
+                    height: 16px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                svg {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            &.n-tabs-tab--active {
+                .n-tabs-tab__label {
+                    color: $tab-bar-active-color !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+import { createApp } from 'vue';
+import App from './login.vue';
+import { i18n } from '@utility/i18n.ts';
+import dict from '@utility/localization.ts';
+import { overrideLocalStorageEvent } from '@utility/localstorage.ts';
+import '../assets/theme/tcdri.scss';
+dict.initLoginDictionary();
+overrideLocalStorageEvent(); //重写localStorage事件
+var app = createApp(App);
+app.use(i18n);
+app.mount('#app');

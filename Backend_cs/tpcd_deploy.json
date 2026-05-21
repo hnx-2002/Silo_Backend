@@ -1,0 +1,106 @@
+{
+  "taskName": "ptools_psilo",
+  "robotKey": "<企业微信群机器人Key>",
+  "serviceUrl": "http://<发布地址>:<发布端口>/PTools_PSilo/login.html",
+  "deployCommands": [
+    {
+      "commandName": "pro",
+      "scripts": [
+        {
+          "canditions": [
+            {
+              "command": "/usr/bin/docker",
+              "params": "ps -a"
+            },
+            {
+              "command": "grep",
+              "params": "-q ptools_psilo"
+            }
+          ],
+          "execute": {
+            "command": "/usr/bin/docker",
+            "params": "stop ptools_psilo"
+          }
+        },
+        {
+          "canditions": [
+            {
+              "command": "/usr/bin/docker",
+              "params": "ps -a"
+            },
+            {
+              "command": "grep",
+              "params": "-q ptools_psilo"
+            }
+          ],
+          "execute": {
+            "command": "/usr/bin/docker",
+            "params": "rm ptools_psilo"
+          }
+        },
+        {
+          "execute": {
+            "command": "/usr/bin/docker",
+            "params": "build -t ptools_psilo ."
+          }
+        },
+        {
+          "execute": {
+            "command": "/usr/bin/docker",
+            "params": "run --name ptools_psilo -p <外部端口>:8080 -d  -v /root/DockerVolumns/ptools_psilo/ProjectLogs:/app/ProjectLogs   -v /root/Settings/ptools_psilo/appsettings.Production.json:/app/appsettings.Production.json -e ASPNETCORE_ENVIRONMENT=Production --restart=always ptools_psilo"
+          }
+        }
+      ]
+    },
+    {
+      "commandName": "stg",
+      "scripts": [
+        {
+          "canditions": [
+            {
+              "command": "/usr/bin/docker",
+              "params": "ps -a"
+            },
+            {
+              "command": "grep",
+              "params": "-q ptools_psilo"
+            }
+          ],
+          "execute": {
+            "command": "/usr/bin/docker",
+            "params": "stop ptools_psilo"
+          }
+        },
+        {
+          "canditions": [
+            {
+              "command": "/usr/bin/docker",
+              "params": "ps -a"
+            },
+            {
+              "command": "grep",
+              "params": "-q ptools_psilo"
+            }
+          ],
+          "execute": {
+            "command": "/usr/bin/docker",
+            "params": "rm ptools_psilo"
+          }
+        },
+        {
+          "execute": {
+            "command": "/usr/bin/docker",
+            "params": "build -t ptools_psilo ."
+          }
+        },
+        {
+          "execute": {
+            "command": "/usr/bin/docker",
+            "params": "run --name ptools_psilo -p <外部端口>:8080 -d  -v /root/DockerVolumns/ptools_psilo/ProjectLogs:/app/ProjectLogs   -v /root/Settings/ptools_psilo/appsettings.Staging.json:/app/appsettings.Staging.json -e ASPNETCORE_ENVIRONMENT=Staging --restart=always ptools_psilo"
+          }
+        }
+      ]
+    }
+  ]
+}
+

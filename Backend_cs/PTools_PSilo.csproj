@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <!-- <Nullable>enable</Nullable> -->
+    <!-- <ImplicitUsings>enable</ImplicitUsings> -->
+    <UserSecretsId>6fa71cb6-92d7-4fc1-bdaa-f35825d60d18</UserSecretsId>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!--<PublishAot>true</PublishAot>-->
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <CopyDocumentationFilesFromPackages Condition="'$(Configuration)'!='RELEASE'">True</CopyDocumentationFilesFromPackages>
+    <DocumentationFile>PTools_PSilo.xml</DocumentationFile>
+    <Configurations>Debug;Release;Staging</Configurations>
+    <CopyDocumentationFilesFromPackages>true</CopyDocumentationFilesFromPackages>
+    <AssemblyVersion>2026.5.21.0</AssemblyVersion>
+    <FileVersion>2026.5.21.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend_cs_T2ACore\T2ACore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+		<PackageReference Include="MemoryPack" Version="1.21.*" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers_Gen\**" />
+    <Content Remove="Controllers_Gen\**" />
+    <EmbeddedResource Remove="Controllers_Gen\**" />
+    <None Remove="Controllers_Gen\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="tpcd_deploy.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ConfuseConfig.crproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="ConfuseConfig.crproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
+

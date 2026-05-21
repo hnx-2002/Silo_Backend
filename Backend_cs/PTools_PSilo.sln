@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C2B3891B-321E-4376-8A12-D65535F2C754}") = "PTools_PSilo", "PTools_PSilo.csproj", "{C173B9FE-76F6-4778-BA4E-37AA11276D57}"
+EndProject
+Project("{C2B3891B-321E-4376-8A12-D65535F2C754}") = "T2ACore", "..\Backend_cs_T2ACore\T2ACore.csproj", "{98F75752-9163-434C-9965-E897EB27CC10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C173B9FE-76F6-4778-BA4E-37AA11276D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C173B9FE-76F6-4778-BA4E-37AA11276D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C173B9FE-76F6-4778-BA4E-37AA11276D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C173B9FE-76F6-4778-BA4E-37AA11276D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C173B9FE-76F6-4778-BA4E-37AA11276D57}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{C173B9FE-76F6-4778-BA4E-37AA11276D57}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{98F75752-9163-434C-9965-E897EB27CC10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F75752-9163-434C-9965-E897EB27CC10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F75752-9163-434C-9965-E897EB27CC10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F75752-9163-434C-9965-E897EB27CC10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F75752-9163-434C-9965-E897EB27CC10}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{98F75752-9163-434C-9965-E897EB27CC10}.Staging|Any CPU.Build.0 = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0176B60C-ACE1-4C53-A4DC-78AC80511CBD}
+	EndGlobalSection
+EndGlobal

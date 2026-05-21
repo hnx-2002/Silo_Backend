@@ -1,0 +1,14 @@
+<project outputDir="./Confused" baseDir="./" xmlns="http://confuser.codeplex.com">
+	<module path="PTools_PSilo.dll">
+		<rule pattern="true" preset="normal" inherit="false">
+			<protection id="constants" action="remove" />
+			<protection id="rename" action="remove" />
+		</rule>
+	</module> 
+	<module path="T2ACore.dll">
+		<rule pattern="true" preset="normal" inherit="false">
+			<protection id="constants" action="remove" />
+			<protection id="rename" action="remove" />
+		</rule>
+	</module> 
+</project>
