@@ -27,5 +27,6 @@ public static class StarterServices
         builder.Services.AddScoped<ITask_base_Business, Task_base_Business>();
         builder.Services.AddScoped<ITask_result_Business, Task_result_Business>();
         builder.Services.AddScoped<ITemplate_silo_Business, Template_silo_Business>();
+        builder.Services.AddScoped<ISiloModelingCalculation_Business, SiloModelingCalculation_Business>();
     }
 }

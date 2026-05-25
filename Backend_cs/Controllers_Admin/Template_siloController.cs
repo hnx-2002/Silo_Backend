@@ -171,6 +171,28 @@ public class Template_siloController : ControllerBase
     }
 
     /// <summary>
+    /// 添加一批实体
+    /// </summary>
+    /// <param name="inSet">实体集合</param>
+    /// <returns></returns>
+    [HttpPost]
+    public TPResponse<Res_2Para> AddBatch([FromBody] List<Template_silo_Class> inSet)
+    {
+        foreach (var item in inSet)
+        {
+            if (item.Id == Guid.Empty)
+            {
+                item.Id = Guid.NewGuid();
+            }
+        }
+
+        var res = Template_siloBusiness.Add(inSet);
+        var msg = res == inSet.Count ? "操作成功" : "操作失败";
+        return TPResponse.New(Res_2Para.New(res == inSet.Count, msg));
+    }
+
+
+    /// <summary>
     /// 删除一批实体
     /// </summary>
     /// <param name="arr">Id集合</param>
