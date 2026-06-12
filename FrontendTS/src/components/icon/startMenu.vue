@@ -1,0 +1,27 @@
+<script setup lang="ts">
+import { NIcon } from 'naive-ui';
+</script>
+<template>
+  <n-icon size="24">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 24 24"
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
+        <path d="M3 6v13"></path>
+        <path d="M12 6v13"></path>
+        <path d="M21 6v13"></path>
+      </g>
+    </svg>
+  </n-icon>
+</template>
+<style scoped></style>

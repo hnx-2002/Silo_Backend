@@ -1,0 +1,36 @@
+{
+  // 应用程序源代码的 TypeScript 配置文件
+  // 扩展 Vue 框架提供的 DOM 环境基础配置
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    // TypeScript 构建信息文件路径，用于加速增量编译
+    "tsBuildInfoFile": "../node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    // 引入 Vite 客户端类型定义
+    "types": ["vite/client"],
+    // 配置基础路径，用于路径别名
+    "baseUrl": "..",
+    // 配置路径别名映射
+    "paths": {
+      "@utility/*": ["src/assets/utility/*"],
+      "@common/*": ["src/components/*"],
+      "@request/*": ["src/request/*"],
+      "@entities/*": ["src/types/tableTypes/*"]
+    },
+
+    /* 严格类型检查选项 */
+    // 启用所有严格类型检查选项
+    "strict": true,
+    // 不允许未使用的局部变量
+    "noUnusedLocals": false,
+    // 不允许未使用的参数
+    "noUnusedParameters": false,
+    // 仅对可擦除的语法进行类型检查
+    "erasableSyntaxOnly": true,
+    // 不允许 switch 语句中的 case 穿透
+    "noFallthroughCasesInSwitch": true,
+    // 检查有副作用的导入语句
+    "noUncheckedSideEffectImports": true
+  },
+  // 包含需要编译的文件：src 目录下的所有 TypeScript 和 Vue 文件
+  "include": ["../src/**/*.ts", "../src/**/*.tsx", "../src/**/*.vue"]
+}

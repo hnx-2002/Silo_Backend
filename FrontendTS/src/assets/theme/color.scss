@@ -1,0 +1,56 @@
+.light {
+  --tp-layoutCard: #f0f3faff; /*内容部分背景颜色*/
+  --tp-contentCard: #ffffff; /*内容部分单个卡片背景色*/
+  --tp-hightLight: #333333; /*高亮色*/
+  --tp-activeButton: #3083fd; /*激活的按钮文字颜色*/
+  --tp-commonBackground: #ffffff; /*通用背景色*/
+  --tp-menuBackground: #0a1936; /*菜单未选中部分背景色*/
+  --tp-menuSubBackground: #030d20; /*展开菜单背景色*/
+  --tp-menuSelectedBackground: #3083fd; /*选中菜单的颜色*/
+  --tp-menuTextColor: rgba(255, 255, 255, 0.6); /*菜单中普通文字颜色*/
+  --tp-menuTextColorSelected: rgba(255, 255, 255, 1); /*菜单中选中文字颜色*/
+  --tp-menuToolTipTextColor: #ffffff; /*菜单Tooltip中文字颜色*/
+  --tp-headerBackground: #0a1936; /*非origin下header颜色*/
+  --tp-headerBackground-origin: #ffffff; /*origin下header颜色*/
+  --tp-headerShadow: 0 1px 4px rgb(0 21 41 / 8%);
+  --tp-tabBarBackground: #f0f3faff; /*顶部标签页背景*/
+  --tp-tabBarItemBackground: #fff; /*顶部标签页标签*/
+  --tp-tabsActiveBackground: #ffffff; /*标签*/
+  --tp-tabsActiveText: #3083fd;
+  --tp-navBarBorder: none;
+  --tp-navBarBackground: #0a1936;
+  --tp-topLogoBottomLine: 1px solid rgba(229, 230, 235, 0.5);
+  --tp-scrollbar: #d2d7dacc; /* rgba(10, 25, 54, 0.1); /*滚动条颜色*/
+  --tp-scrollbarHover: #86909ccc /* rgba(10, 25, 54, 0.2); /*滚动条悬停颜色*/
+    --tp-treeTextSelected: #3083fd; /*规定未给*/
+  --tp-timelineTime: rgb(134, 144, 156); /*时间轴的时间颜色*/
+  --tp-timelineTitle-info: #4098fc; /*时间轴info下的title文字颜色，规定没给，暂按默认值*/
+}
+
+.dark {
+  --tp-layoutCard: #12151aff; /*内容部分背景颜色*/
+  --tp-contentCard: #ffffff; /*内容部分单个卡片背景色*/
+  --tp-hightLight: #f6f6f6; /*高亮色*/
+  --tp-activeButton: #3083fd; /*激活的按钮文字颜色*/
+  --tp-commonBackground: #333333; /*通用背景色*/
+  --tp-menuBackground: #0a1936; /*菜单未选中部分背景色*/
+  --tp-menuSubBackground: #030d20; /*展开菜单背景色*/
+  --tp-menuSelectedBackground: #3083fd; /*选中菜单的颜色*/
+  --tp-menuTextColor: rgba(255, 255, 255, 0.6); /*菜单中普通文字颜色*/
+  --tp-menuTextColorSelected: rgba(255, 255, 255, 1); /*菜单中选中文字颜色*/
+  --tp-menuToolTipTextColor: #ffffff; /*菜单Tooltip中文字颜色*/
+  --tp-headerBackground: #0a1936; /*非origin下header颜色*/
+  --tp-headerBackground-origin: #ffffff; /*origin下header颜色*/
+  --tp-tabBarBackground: #00000000; /*顶部标签页背景*/
+  --tp-tabBarItemBackground: #0a1936; /*顶部标签页标签背景*/
+  --tp-tabsActiveBackground: #0a1936; /*标签*/
+  --tp-tabsActiveText: #3083fd;
+  --tp-navBarBorder: 1px solid rgba(229, 230, 235, 0.2);
+  --tp-navBarBackground: #0a1936;
+  --tp-topLogoBottomLine: 1px solid rgba(229, 230, 235, 0.5);
+  --tp-scrollbar: #d2d7dacc; /* rgba(10, 25, 54, 0.1); /*滚动条颜色*/
+  --tp-scrollbarHover: #86909ccc /* rgba(10, 25, 54, 0.2); /*滚动条悬停颜色*/
+    --tp-treeTextSelected: #3083fd; /*规定未给*/
+  --tp-timelineTime: rgb(134, 144, 156); /*时间轴的时间颜色*/
+  --tp-timelineTitle-info: #4098fc; /*时间轴info下的title文字颜色，规定没给，暂按默认值 */
+}
